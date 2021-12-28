@@ -26,10 +26,10 @@ function create() {
   function collectStar(player, star) {
     star.disableBody(true, true);
 
-    score += 20;
+    score += 10;
     scoreText.setText('Score: ' + score);
 
-    if (stars.countActive(true) === 11) {
+    if (stars.countActive(true) === 0) {
       stars.children.iterate(function (child) {
         child.enableBody(true, child.x, 0, true, true);
       });
@@ -39,12 +39,10 @@ function create() {
           ? Phaser.Math.Between(400, 800)
           : Phaser.Math.Between(0, 400);
 
-      for (let i = 0; i < 100; i += 1) {
-        bomb = bombs.create(x, 100, 'bomb');
-        bomb.setBounce(1);
-        bomb.setCollideWorldBounds(true);
-        bomb.setVelocity(player.x, 20);
-      }
+      bomb = bombs.create(x, 100, 'bomb');
+      bomb.setBounce(1);
+      bomb.setCollideWorldBounds(true);
+      bomb.setVelocity(player.x, 20);
     }
   }
 
@@ -70,7 +68,7 @@ function create() {
 
   player = this.physics.add.sprite(100, 450, 'dude');
 
-  player.setBounce(0.5);
+  player.setBounce(0.2);
   player.setCollideWorldBounds(true);
 
   this.anims.create({
@@ -140,11 +138,11 @@ let config = {
 
 function update() {
   if (cursors.left.isDown) {
-    player.setVelocityX(-500);
+    player.setVelocityX(-330);
 
     player.anims.play('left', true);
   } else if (cursors.right.isDown) {
-    player.setVelocityX(500);
+    player.setVelocityX(300);
 
     player.anims.play('right', true);
   } else {
@@ -154,7 +152,7 @@ function update() {
   }
 
   if (cursors.up.isDown && player.body.touching.down) {
-    player.setVelocityY(-1000);
+    player.setVelocityY(-400);
   }
 }
 
