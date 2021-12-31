@@ -79,7 +79,10 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "@types/matter-js": "^0.17.6",
+    "matter-js": "^0.18.0",
     "normalize.css": "^8.0.1",
-    "phaser": "^3.55.2"
+    "phaser": "^3.55.2",
+    "tile-extruder": "^2.1.0"
   }
 }
