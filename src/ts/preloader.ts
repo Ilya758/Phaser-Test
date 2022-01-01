@@ -20,6 +20,7 @@ export default class Preloader extends Phaser.Scene {
       ' ../assets/Prison/zombie.png',
       '../assets/Prison/zombie.json'
     );
+    this.load.image('bullet', ' ../assets/Prison/bullet.png');
   }
 
   create() {
