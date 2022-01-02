@@ -4,20 +4,20 @@
       "frame": {
         "x": 0,
         "y": 0,
-        "w": 19.2,
-        "h": 38.4
+        "w": 30,
+        "h": 44
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
         "x": 0,
-        "y": 0,
-        "w": 19.2,
-        "h": 38.4
+        "y": 6,
+        "w": 30,
+        "h": 44
       },
       "sourceSize": {
-        "w": 19.2,
-        "h": 38.4
+        "w": 32,
+        "h": 64
       },
       "pivot": {
         "x": 0.5,
@@ -31,9 +31,9 @@
     "image": "person.png",
     "format": "RGBA8888",
     "size": {
-      "w": 19,
-      "h": 38
+      "w": 30,
+      "h": 44
     },
-    "scale": 0.6
+    "scale": 1
   }
 }

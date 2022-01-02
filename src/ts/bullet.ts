@@ -11,6 +11,7 @@ export default class Bullet extends Phaser.Physics.Arcade.Image {
 
   private fire(x: number, y: number, personX: number, personY: number) {
     this.setTexture('bullet');
+    this.body.setSize(this.width, this.height);
     this.setActive(true);
     this.setVisible(true);
     this.setPosition(personX, personY);
@@ -31,7 +32,7 @@ export default class Bullet extends Phaser.Physics.Arcade.Image {
     return this.fire(x, y, personX, personY);
   }
 
-  update(time: number, delta: number) {
+  update(_: number, delta: number) {
     this.lifespan -= delta;
 
     if (this.lifespan <= 0) {
